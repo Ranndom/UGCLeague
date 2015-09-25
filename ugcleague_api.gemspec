@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
     gem.email           = ["Ranndom@rnndm.xyz"]
     gem.description     = %q{Ruby client for UGC League API}
     gem.summary         = %q{Ruby client for UGC League API}
-    gem.homepage        = "https://github.com/Ranndom/UGCLeague-API"
+    gem.homepage        = "https://github.com/Ranndom/UGCLeague"
 
     gem.files           = `git ls-files`.split($/)
     gem.require_paths   = ["lib"]
