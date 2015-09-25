@@ -1,9 +1,9 @@
-module UGC
+module UGCLeague
     module Configuration
 
         VALID_OPTIONS_KEYS = [:api_key, :user_agent].freeze
 
-        DEFAULT_USER_AGENT = "UGC League Ruby Gem #{UGC::VERSION}".freeze
+        DEFAULT_USER_AGENT = "UGC League Ruby Gem #{UGCLeague::VERSION}".freeze
 
         attr_accessor(*VALID_OPTIONS_KEYS)
 

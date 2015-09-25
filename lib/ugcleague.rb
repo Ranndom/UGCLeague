@@ -5,11 +5,11 @@ require 'ugcleague/request'
 require 'ugcleague/api'
 require 'ugcleague/client'
 
-module UGC
+module UGCLeague
     extend Configuration
 
     def self.client(options={})
-        UGC::Client.new(options)
+        UGCLeague::Client.new(options)
     end
 
     def self.method_missing(method, *args, &block)

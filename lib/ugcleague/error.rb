@@ -1,4 +1,4 @@
-module UGC
+module UGCLeague
     module Error
 
         class Error < StandardError; end

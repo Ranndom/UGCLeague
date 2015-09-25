@@ -2,7 +2,7 @@ require 'httparty'
 require 'json'
 require 'rack'
 
-module UGC
+module UGCLeague
     class Request
         
         include HTTParty
@@ -31,14 +31,6 @@ module UGC
         end
 
         private
-
-        def validate(response)
-            case response.body
-                when "Access denied."; raise Error::Unauthorized.new error_message(response)
-            end
-
-            response.parsed_response
-        end
 
         def error_message(response)
             parsed_response = response.parsed_response

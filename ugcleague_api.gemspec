@@ -4,7 +4,7 @@ require 'ugcleague/version'
 
 Gem::Specification.new do |gem|
     gem.name            = "ugcleague"
-    gem.version         = UGC::VERSION
+    gem.version         = UGCLeague::VERSION
     gem.authors         = ["Ranndom"]
     gem.email           = ["Ranndom@rnndm.xyz"]
     gem.description     = %q{Ruby client for UGC League API}
