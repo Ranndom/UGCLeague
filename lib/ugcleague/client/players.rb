@@ -1,4 +1,4 @@
-class UGC::Client
+class UGCLeague::Client
     module Players
 
         def player_has_profile(steamid)

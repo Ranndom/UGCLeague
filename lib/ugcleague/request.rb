@@ -27,7 +27,15 @@ module UGCLeague
         def get(options={})
             options[:key] = @api_key unless !@api_key
             query_string = Rack::Utils.build_query(options)
-            validate self.class.get("http://www.ugcleague.com/api/api.php?#{query_string}")
+
+            debug_message("GET request for \"http://www.ugcleague.com/api/api.php?#{query_string}\" sent (using useragent \"#{@user_agent}\")")
+            self.class.get("http://www.ugcleague.com/api/api.php?#{query_string}")
+        end
+
+        def debug_message(message)
+            if @debug == true
+                puts "DEBUG: #{message}"
+            end
         end
 
         private
