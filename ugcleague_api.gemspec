@@ -12,7 +12,13 @@ Gem::Specification.new do |gem|
     gem.homepage        = "https://github.com/Ranndom/UGCLeague"
 
     gem.files           = `git ls-files`.split($/)
+    gem.test_files      = gem.files.grep(%r{^(test|spec)/})
     gem.require_paths   = ["lib"]
 
     gem.add_runtime_dependency 'httparty'
+    gem.add_runtime_dependency "rack"
+
+    gem.add_development_dependency 'rake'
+    gem.add_development_dependency 'rspec'
+    gem.add_development_dependency 'webmock'
 end

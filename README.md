@@ -26,6 +26,7 @@ require 'ugcleague'
 UGCLeague.configure do |config|
     config.api_key      = "API Key"     # Obtain from a UGC admin.
     config.user_agent   = "User agent"  # User agent to be sent with the request.
+    config.debug        = false         # Whether to print debug messages.
 end
 ```
 
@@ -37,6 +38,12 @@ UGCLeague.api_key = "API Key"
 
 # Set the user agent.
 UGCLeague.user_agent = "User agent"
+
+# Set debug.
+UGCLeague.debug = true
+
+# Checks if the player has a profile on UGC.
+UGCLeague.player_has_profile(76561198063808035)
 
 # Get a player's team history.
 UGCLeague.player_history(76561198063808035)

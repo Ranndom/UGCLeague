@@ -13,10 +13,6 @@ module UGCLeague
         attr_accessor :api_key
 
         def self.parse(body)
-            case body
-                when "Access denied."; raise Error::Unauthorized.new "Invalid API key"
-            end
-
             begin
                 JSON.load body
             rescue JSON::ParserError
@@ -29,13 +25,19 @@ module UGCLeague
             query_string = Rack::Utils.build_query(options)
 
             debug_message("GET request for \"http://www.ugcleague.com/api/api.php?#{query_string}\" sent (using useragent \"#{@user_agent}\")")
-            self.class.get("http://www.ugcleague.com/api/api.php?#{query_string}")
+            validate self.class.get("http://www.ugcleague.com/api/api.php?#{query_string}")
+        end
+
+        def validate(response)
+            case response.body
+                when "Access denied."; raise Error::Unauthorized.new "Invalid API key"
+            end
+
+            response.parsed_response
         end
 
         def debug_message(message)
-            if @debug == true
-                puts "DEBUG: #{message}"
-            end
+            puts "DEBUG: #{message}" if @debug
         end
 
         private
@@ -49,3 +51,4 @@ module UGCLeague
 
     end
 end
+
