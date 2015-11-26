@@ -7,7 +7,8 @@ Gem::Specification.new do |gem|
     gem.version         = UGCLeague::VERSION
     gem.authors         = ["Ranndom"]
     gem.email           = ["Ranndom@rnndm.xyz"]
-    gem.description     = %q{Ruby client for UGC League API}
+    gem.description     = %q{Ruby client for UGC League API.
+                            NOTE: The admin who uploaded the API spec to GitHub has since removed the Gist. Unsure if the API is still available.}
     gem.summary         = %q{Ruby client for UGC League API}
     gem.homepage        = "https://github.com/Ranndom/UGCLeague"
 
