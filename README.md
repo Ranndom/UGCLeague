@@ -1,3 +1,5 @@
+# NOTE: The admin who uploaded the API spec to GitHub has since removed the Gist. Unsure if the API is still available.
+
 # UGC League
 
 UGCLeague is a Ruby client for the UGC League API.
